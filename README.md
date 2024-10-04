@@ -53,3 +53,22 @@ To get started, clone the repository and install the required dependencies:
 git clone https://github.com/yourusername/emotion-detection.git
 cd emotion-detection
 pip install -r requirements.txt
+
+Usage Instructions
+Download the FER-2013 dataset and place it in the src folder.
+To train the model, run:
+bash
+cd src
+python emotions.py --mode train
+
+To run the pre-trained model and view predictions, execute:
+bash
+cd src
+python emotions.py --mode display
+
+Model Architecture
+The system employs a 4-layer Convolutional Neural Network (CNN) for emotion classification. Face detection is performed using Haar Cascade, resizing detected faces to 48x48 pixels for input into the CNN. The network outputs softmax scores for each emotion class.
+Contributing
+Contributions are welcome! If you have suggestions or improvements, please create a pull request or open an issue.
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
